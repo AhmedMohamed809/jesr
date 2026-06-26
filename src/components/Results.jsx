@@ -98,7 +98,7 @@ function CreatorCard({ r, rank, t, lang }) {
       <div className="j-creator-stats">
         <div><b>{fmt(inf.followers)}</b><span>{t.followers}</span></div>
         <div><b>{fmt(inf.avgViews)}</b><span>{t.avgViews}</span></div>
-        <div><b>{inf.engagement}%</b><span>engagement</span></div>
+        <div><b>{inf.engagement}%</b><span>{t.engagement}</span></div>
         <div><b>{money(inf.price)}</b><span>{t.perPost}</span></div>
       </div>
 
