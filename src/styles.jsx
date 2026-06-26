@@ -7,7 +7,8 @@ export default function GlobalStyles() {
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap');
 *{box-sizing:border-box}
 html,body,#root{margin:0;min-height:100%}
-body{background:${C.ink};font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif}
+body{background:${C.ink};color:${C.text};font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+[dir=rtl]{word-spacing:.5px}
 button{font-family:inherit}
 ::selection{background:${C.coral};color:#fff}
 .j-header{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(16px,4vw,40px);position:sticky;top:0;z-index:30;background:rgba(12,16,36,.82);backdrop-filter:blur(14px);border-bottom:1px solid ${C.line}}
@@ -18,8 +19,8 @@ button{font-family:inherit}
 .j-eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:${C.coral};background:${C.coral}14;border:1px solid ${C.coral}33;padding:6px 12px;border-radius:999px;letter-spacing:.2px}
 .j-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;margin-bottom:54px}
 .j-h1{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:clamp(30px,5vw,50px);line-height:1.12;margin:18px 0 16px;letter-spacing:-.5px;background:linear-gradient(120deg,${C.text},${C.coral2});-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.j-sub{color:${C.muted};font-size:clamp(15px,2vw,17px);line-height:1.75;max-width:520px}
-.j-trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:24px;color:${C.muted};font-size:13px}
+.j-sub{color:${C.muted};font-size:clamp(16px,2vw,18px);line-height:1.8;max-width:540px}
+.j-trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;color:${C.muted};font-size:13.5px}
 .j-trust span{display:inline-flex;align-items:center;gap:7px}
 .j-hero-art{aspect-ratio:1.3;width:100%}
 .j-roles{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -29,14 +30,17 @@ button{font-family:inherit}
 .j-role-cta{font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .j-rtl-flip{transition:.2s}
 [dir=rtl] .j-rtl-flip{transform:scaleX(-1)}
-.j-h2{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:clamp(24px,4vw,34px);margin:0 0 8px;letter-spacing:-.4px}
-.j-h3{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:19px;display:flex;align-items:center;gap:9px;margin:30px 0 16px}
-.j-sub2{color:${C.muted};font-size:15px;line-height:1.7;margin:0 0 26px}
+.j-h2{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:clamp(24px,4vw,34px);margin:0 0 8px;letter-spacing:-.4px;line-height:1.25}
+[dir=rtl] .j-h1,[dir=rtl] .j-h2{letter-spacing:0}
+[dir=rtl] .j-h1{line-height:1.3}
+.j-h3{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:20px;display:flex;align-items:center;gap:9px;margin:32px 0 16px}
+.j-sub2{color:${C.muted};font-size:15.5px;line-height:1.75;margin:0 0 26px;max-width:640px}
 .j-card{background:linear-gradient(160deg,${C.ink2},${C.ink});border:1px solid ${C.line2};border-radius:22px;padding:clamp(20px,3vw,30px)}
 .j-form{display:flex;flex-direction:column;gap:18px}
 .j-field{display:flex;flex-direction:column;gap:8px}
-.j-label{font-size:13px;font-weight:600;color:${C.text};display:flex;align-items:center;gap:6px}
-.j-input{width:100%;background:${C.ink};border:1px solid ${C.line2};border-radius:12px;padding:12px 14px;color:${C.text};font-size:14.5px;font-family:inherit;transition:.16s;outline:none}
+.j-label{font-size:13.5px;font-weight:600;color:${C.text};display:flex;align-items:center;gap:6px}
+.j-input{width:100%;background:${C.ink};border:1px solid ${C.line2};border-radius:12px;padding:13px 14px;color:${C.text};font-size:15px;font-family:inherit;transition:.16s;outline:none}
+.j-input::placeholder{color:${C.muted};opacity:.75}
 .j-input:focus{border-color:${C.coral};box-shadow:0 0 0 3px ${C.coral}22}
 textarea.j-input{resize:vertical;min-height:54px}
 .j-grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -78,20 +82,20 @@ select.j-input{appearance:none;cursor:pointer}
 .j-ava.lg{width:58px;height:58px;font-size:18px;border-radius:16px}
 .j-matchbox{text-align:center;flex-shrink:0}
 .j-match-n{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:22px;color:${C.mint};line-height:1}
-.j-match-l{font-size:10.5px;color:${C.muted};font-weight:600}
+.j-match-l{font-size:11px;color:${C.muted};font-weight:600;text-transform:uppercase;letter-spacing:.4px}
 .j-bar{height:5px;background:${C.ink};border-radius:999px;margin:13px 0;overflow:hidden}
 .j-bar span{display:block;height:100%;background:linear-gradient(90deg,${C.coral},${C.mint});border-radius:999px;transition:width 1s ease}
 .j-creator-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
 .j-creator-stats div{display:flex;flex-direction:column;gap:2px}
 .j-creator-stats b{font-family:'IBM Plex Mono',monospace;font-size:15px}
-.j-creator-stats span{font-size:10.5px;color:${C.muted}}
+.j-creator-stats span{font-size:11.5px;color:${C.muted}}
 .j-proj{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding-top:12px;border-top:1px solid ${C.line};font-size:13px;font-weight:600;font-family:'IBM Plex Mono',monospace}
 .j-proj>span{display:inline-flex;align-items:center;gap:5px}
 .j-budgetflag{margin-inline-start:auto;font-size:11.5px;padding:4px 10px;border-radius:999px;display:inline-flex;align-items:center;gap:4px;font-family:'IBM Plex Sans Arabic'}
 .j-budgetflag.ok{background:${C.mint}1c;color:${C.mint}}
 .j-budgetflag.over{background:${C.muted}22;color:${C.muted}}
-.j-why{margin-top:12px;font-size:13px;color:${C.text};line-height:1.6;background:${C.ink}66;border:1px solid ${C.line};border-radius:11px;padding:11px 13px}
-.j-why-l{color:${C.coral};font-weight:700;font-size:11.5px;display:block;margin-bottom:3px}
+.j-why{margin-top:12px;font-size:13.5px;color:${C.text};line-height:1.75;background:${C.ink}66;border:1px solid ${C.line};border-radius:11px;padding:12px 14px}
+.j-why-l{color:${C.coral};font-weight:700;font-size:12px;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
 .j-risk{margin-top:18px;background:${C.ink2}}
 .j-profilebar{display:flex;align-items:center;gap:16px;background:linear-gradient(160deg,${C.ink2},${C.ink});border:1px solid ${C.line2};border-radius:20px;padding:18px 20px;margin-bottom:22px;flex-wrap:wrap}
 .j-demo{font-size:10.5px;font-weight:700;color:${C.gold};background:${C.gold}1c;border:1px solid ${C.gold}44;padding:3px 9px;border-radius:999px}
