@@ -24,7 +24,7 @@ button{font-family:inherit}
 .j-trust span{display:inline-flex;align-items:center;gap:7px}
 .j-hero-art{aspect-ratio:1.3;width:100%}
 .j-roles{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.j-role{display:flex;align-items:center;gap:18px;text-align:start;background:linear-gradient(160deg,${C.ink2},${C.ink});border:1px solid ${C.line2};border-radius:20px;padding:24px;cursor:pointer;transition:.22s}
+.j-role{display:flex;align-items:center;gap:18px;text-align:start;background:linear-gradient(160deg,${C.ink2},${C.ink});border:1px solid ${C.line2};border-radius:20px;padding:24px;cursor:pointer;transition:.22s;color:${C.text}}
 .j-role:hover{transform:translateY(-3px);border-color:${C.coral};box-shadow:0 18px 50px -20px ${C.coral}55}
 .j-role-ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;border:1px solid;flex-shrink:0}
 .j-role-cta{font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
